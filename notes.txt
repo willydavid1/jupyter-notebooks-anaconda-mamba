@@ -1,0 +1,34 @@
+conda env list                                                     | lista los entornos
+conda create --name py35 python=3.5 pandas                         | crea un nuevo entorno
+conda activate py35                                                | Activa el entorno
+conda deactivate                                                   | desactiva el entono y lleva a base
+conda list                                                         | Lista las versiones de los paquetes
+conda update pandas                                                | Actualiza una lib a la versión más reciente
+conda install pandas=1.2                                           | Instala una libreria
+conda create --name py39 --copy --clone py35                       | Para clonar un ambiente
+Conda remove [lib_name]                                            | Elimina una libreria de pandas
+conda env remove --name py35                                       | Elimina un ambiente
+
+
+
+Para instalar paquetes que no están disponibles en el canal principal de conda:
+- conda install --channel conda-forge boltons
+
+Una revisión es el estado de mi ambiente y cada vez que se instala una se crea una nueva revisión
+conda list –revision             | Lista las revisiones
+conda install --revision 0       | Se mueve a esa revision 0
+
+conda env export --from-history             | para exportar las librerías que instale
+conda env export --no-builds                | exporta todas las librerias del ambiente
+conda env export --from-history --file environment.yml | exporta las librerias como un file.
+conda env create --file environment.yml                | Instala un nuevo ambiente desde un file.
+
+
+
+Instalar librerias que no están en conda (se instalan desde pip)
+pip install pybbn.
+
+conda install --channel conda-forge mamba
+$ mamba help O $ mamba --help
+mamba env create --file environment.yaml      | Crea el ambiente
+conda activate py39

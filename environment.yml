@@ -1,0 +1,9 @@
+name: py39
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - pandas=1.2
+  - pip:
+    - pybbn
+prefix: /home/willydavid1/anaconda3/envs/py39
